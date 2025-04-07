@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/ligar.css">
+    <title>Nada de tapa!</title>
+</head>
+<body>
+    <main class="container">
+        <h1 class="vitoria">Você venceu!</h1>
+        <p>Se quiser participar de mais jogos como esse em troca de dinheiro... me ligue.</p>
+
+        <img src="../images/cardr6.jpg" alt="Cartão com número" class="card-img">
+
+        <button class="botao-ligar" onclick="realizarChances()">
+            <img src="../images/ligarnow.jpg" alt="Ligar agora">
+            <span>Ligar agora</span>
+        </button>
+    </main>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const corEscolhida = urlParams.get('cor');
+
+        function realizarChances() {
+            if (!corEscolhida) {
+                alert('Erro: Cor não definida!');
+                return;
+            }
+
+            const chance = Math.random();
+            let destino;
+
+            if (corEscolhida === 'vermelho') {
+                destino = chance < 0.01 ? 'frontman.html' : 'guarda.html';
+            } else if (corEscolhida === 'azul') {
+                destino = chance < 0.01 ? 'frontman.html' : 'jogador.html';
+            } else {
+                alert('Cor inválida.');
+                return;
+            }
+
+            window.location.href = destino;
+        }
+    </script>
+</body>
+</html>

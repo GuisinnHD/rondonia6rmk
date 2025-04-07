@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0e0e0e;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    background-color: #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  }
+  
+  .titulo {
+    font-size: 26px;
+    color: #ff3333;
+    margin-bottom: 10px;
+  }
+  
+  .subtitulo {
+    font-size: 20px;
+    color: #ff9999;
+    margin-bottom: 10px;
+  }
+  
+  .descricao {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #dddddd;
+  }
+  
+  .cartoes-img {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 2px solid #ff3333;
+  }
+  
+  .botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botao img {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  .botao-azul {
+    background-color: #007bff;
+  }
+  
+  .botao-azul:hover {
+    background-color: #005ecb;
+  }
+  
+  .botao-vermelho {
+    background-color: #e60000;
+  }
+  
+  .botao-vermelho:hover {
+    background-color: #cc0000;
+  }
+  
+  /* Responsividade */
+  @media (min-width: 600px) {
+    .botoes {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .botao {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .titulo {
+      font-size: 22px;
+    }
+  
+    .subtitulo {
+      font-size: 18px;
+    }
+  
+    .botao {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .botao img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  
